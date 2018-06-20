@@ -10,7 +10,7 @@ app.get('/', function(req, res){
   res.render('index')
 })
 
-app.post('/phones', function(req, res){
+app.post('/phone', function(req, res){
   res.render('phones', { phone: req.body } )
 })
 
