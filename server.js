@@ -10,6 +10,10 @@ app.get('/', function(req, res){
   res.render('index')
 })
 
+app.post('/phones', function(req, res){
+  res.render('phones', { phone: req.body } )
+})
+
 let port = process.env.PORT || 8080
 app.listen(port)
 console.log("You're on localhost " + port)
