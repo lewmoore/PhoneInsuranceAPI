@@ -13,7 +13,7 @@ describe('Phones', function(){
 
   it('should post with user selection', function(){
     chai.request(server)
-    .post('/phones')
+    .post('/phone')
     .send(phoneSelection)
     .end(function(err, res){
       res.should.have.status(200)
