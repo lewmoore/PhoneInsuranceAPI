@@ -42,4 +42,16 @@ describe('Phones', function(){
       res.text.should.contain('Premium: £40')
     })
   })
+
+  it('shows phone premium when Samsung Galaxy is selected', function(){
+    chai.request(server)
+    .post('/phone')
+    .send({
+      phone: 'SamsungGalaxy'
+    })
+    .end(function(err, res){
+      res.should.have.status(200)
+      res.text.should.contain('Premium: £45.99')
+    })
+  })
 })
