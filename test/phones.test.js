@@ -30,4 +30,16 @@ describe('Phones', function(){
       res.text.should.contain('Premium: £50.42')
     })
   })
+
+  it('shows phone premium when iPhoneX is selected', function(){
+    chai.request(server)
+    .post('/phone')
+    .send({
+      phone: 'GooglePixel'
+    })
+    .end(function(err, res){
+      res.should.have.status(200)
+      res.text.should.contain('Premium: £40')
+    })
+  })
 })
