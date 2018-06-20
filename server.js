@@ -15,6 +15,10 @@ app.post('/phone', function(req, res){
   res.render('phones', { phone: req.body, data: data } )
 })
 
+app.get('/premium', function(req, res){
+  res.render('premium')
+})
+
 let port = process.env.PORT || 8080
 app.listen(port)
 console.log("You're on localhost " + port)
