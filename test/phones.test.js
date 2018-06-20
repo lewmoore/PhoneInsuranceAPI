@@ -31,7 +31,7 @@ describe('Phones', function(){
     })
   })
 
-  it('shows phone premium when iPhoneX is selected', function(){
+  it('shows phone premium when Google Pixel is selected', function(){
     chai.request(server)
     .post('/phone')
     .send({
