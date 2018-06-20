@@ -2,9 +2,13 @@
 
 <p> Welcome to Brolly! </p>
 <p> Select a phone to insure: </p>
-<select name="phones">
-  <option value-''>Select a phone</option>
-  <option value="iPhoneX">iPhone X 64GB</option>
-  <option value="GooglePixel">Google Pixel 2 64GB</option>
-  <option value="SamsungGalaxy">Samsung Galaxy S9</option>
-</select>
+<form action='/phone' method='POST'>
+  <select name="phones">
+    <option value-''>Select a phone</option>
+    <option value="iPhoneX">iPhone X 64GB</option>
+    <option value="GooglePixel">Google Pixel 2 64GB</option>
+    <option value="SamsungGalaxy">Samsung Galaxy S9</option>
+  </select>
+  <br></br>
+  <input type='submit'>
+</form>
