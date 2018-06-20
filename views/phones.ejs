@@ -1,7 +1,9 @@
+<p> Please select a premium: </p>
 <% result = data.map(function(element) { %>
   <% if (phone.phone == element.phone) { %>
-    <p> <%= phone.phone %> Premium: £<%= element.premium %> </p>
+    <%= phone.phone %> Premium: £<%= element.premium %>
   <% } %>
 <% }) %>
 
-<%= result %>
+
+<p> <%= result %> </p>
