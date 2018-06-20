@@ -11,6 +11,7 @@ app.get('/', function(req, res){
 })
 
 app.post('/phone', function(req, res){
+  console.log(req.body, "PHONE")
   res.render('phones', { phone: req.body } )
 })
 
