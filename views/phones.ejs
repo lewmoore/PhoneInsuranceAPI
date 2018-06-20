@@ -1,11 +1,7 @@
-<% if (phone.phone == 'iPhoneX') { %>
-  <%= phone.phone %> Premium: £50.42
+<% result = data.map(function(element) { %>
+  <% if (phone.phone == element.phone) { %>
+    <p> <%= phone.phone %> Premium: £<%= element.premium %> </p>
   <% } %>
+<% }) %>
 
-<% if (phone.phone == 'GooglePixel') { %>
-  <%= phone.phone %> Premium: £40
-  <% } %>
-
-<% if (phone.phone == 'SamsungGalaxy') { %>
-  <%= phone.phone %> Premium: £45.99
-  <% } %>
+<%= result %>

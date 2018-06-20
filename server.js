@@ -1,6 +1,7 @@
 const express = require('express')
 const app = express()
 const bodyParser = require('body-parser')
+let data = require('./data.js')
 app.set("view engine", "ejs")
 app.set("views", "views")
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -11,7 +12,7 @@ app.get('/', function(req, res){
 })
 
 app.post('/phone', function(req, res){
-  res.render('phones', { phone: req.body } )
+  res.render('phones', { phone: req.body, data: data } )
 })
 
 let port = process.env.PORT || 8080
