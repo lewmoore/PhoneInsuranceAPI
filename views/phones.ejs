@@ -2,6 +2,9 @@
 <% result = data.map(function(element) { %>
   <% if (phone.phone == element.phone) { %>
     <%= phone.phone %> Premium: £<%= element.premium %>
+    <form action = "/premium" method = "post">
+        <button type="submit" name="premium" value=<%= element.premium %>>Select Premium </button>
+    </form>
   <% } %>
 <% }) %>
 

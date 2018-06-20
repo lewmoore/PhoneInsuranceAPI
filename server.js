@@ -16,7 +16,12 @@ app.post('/phone', function(req, res){
 })
 
 app.get('/premium', function(req, res){
-  res.render('premium')
+  res.render('premium', { request: req.method })
+})
+
+app.post('/premium', function(req, res){
+  console.log(req.method, "REQ")
+  res.render('premium', { premium: req.body, request: req.method } )
 })
 
 let port = process.env.PORT || 8080

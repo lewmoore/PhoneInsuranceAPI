@@ -14,4 +14,17 @@ describe('Premium', function(){
       res.should.have.status(200)
     })
   })
+
+  it('should post and display user selection', function(done){
+    chai.request(server)
+    .post('/premium')
+    .send({
+      premium: '45.99'
+    })
+    .end(function(err, res){
+      res.should.have.status(200)
+      res.text.should.contain('You selected premium: £45.99')
+      done()
+    })
+  })
 })
